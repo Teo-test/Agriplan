@@ -236,7 +236,7 @@ const Parcelles = () => {
         </div>
       </div>
 
-      <div style={{ display: "flex", height: "calc(100vh - 120px)" }}>
+      <div style={{ display: "flex", height: "100%" }}>
         {/* Vue Carte */}
         {currentView === 'map' && (
           <>
@@ -252,22 +252,23 @@ const Parcelles = () => {
                 {renderPolygons(sections, "#FFD700", 0.35, "section")}
                 <DrawControl onCreated={handleCreated} onEdited={handleEdited} />
               </MapContainer>
-            </div>
+            
 
-            {/* Légende */}
-            <div className="map-legend">
-              <h4>Légende</h4>
-              <div className="legend-item">
-                <span className="legend-color" style={{ backgroundColor: "#1E90FF" }}></span>
-                Emplacements
-              </div>
-              <div className="legend-item">
-                <span className="legend-color" style={{ backgroundColor: "#32CD32" }}></span>
-                Zones
-              </div>
-              <div className="legend-item">
-                <span className="legend-color" style={{ backgroundColor: "#FFD700" }}></span>
-                Sections
+              {/* Légende */}
+              <div className="map-legend">
+                <h4>Légende</h4>
+                <div className="legend-item">
+                  <span className="legend-color" style={{ backgroundColor: "#1E90FF" }}></span>
+                  Emplacements
+                </div>
+                <div className="legend-item">
+                  <span className="legend-color" style={{ backgroundColor: "#32CD32" }}></span>
+                  Zones
+                </div>
+                <div className="legend-item">
+                  <span className="legend-color" style={{ backgroundColor: "#FFD700" }}></span>
+                  Sections
+                </div>
               </div>
             </div>
           </>
